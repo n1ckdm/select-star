@@ -13,7 +13,7 @@ bot.on('ready', () => {
 });
 
 bot.on('message', msg => {
-    if (msg.endsWith("?")) {
+    if (msg.content.endsWith("?")) {
         msg.reply(eightball());
     }
 });
