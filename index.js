@@ -11,7 +11,7 @@ bot.login(TOKEN);
 bot.on('message', msg => {
     if (msg.author.bot) return false;
 
-    if (msg.mentions.has(client.user.id) && msg.content.endsWith("?")) {
+    if (msg.mentions.has(bot.user.id) && msg.content.endsWith("?")) {
         msg.reply(eightball());
     }
 })
