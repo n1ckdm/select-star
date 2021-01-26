@@ -8,12 +8,10 @@ const TOKEN = process.env.TOKEN;
 
 bot.login(TOKEN);
 
-bot.on('ready', () => {
-    console.info(`Logged in as ${bot.user.tag}!`);
-});
-
 bot.on('message', msg => {
-    if (msg.content.endsWith("?")) {
+    if (message.author.bot) return false;
+    
+    if (message.mentions.has(client.user.id) && msg.content.endsWith("?")) {
         msg.reply(eightball());
     }
-});
+})
