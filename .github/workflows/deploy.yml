@@ -26,5 +26,5 @@ jobs:
         PORT: ${{ secrets.PORT }}
         KEY: ${{ secrets.SSHKEY }}
       with:
-        source: "./build"
-        target: "/bots/select-star"
+        source: "./build/index-bundle.js"
+        target: "/bots/select-star/index-bundle.js"
